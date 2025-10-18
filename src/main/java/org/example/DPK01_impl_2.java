@@ -1,14 +1,20 @@
 package org.example;
 
 public class DPK01_impl_2 {
-    public static void main(String[] args) {
-        String originalWord = "Hello";
-        String invertedWord = "";
-        //Here are a loop from the last character to the first,
-        //Appending each character to the new string
-        for (int i = originalWord.length() - 1; i >= 0; i--) {
-            invertedWord += originalWord.charAt(i);
+    public static String revert(String input) {
+        char[] chars = input.toCharArray();
+        int left = 0, right = chars.length - 1;
+        while (left < right) {
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;
+            left++;
+            right--;
         }
-        System.out.println(invertedWord);
+        return new String(chars);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(revert("Hello"));
     }
 }
