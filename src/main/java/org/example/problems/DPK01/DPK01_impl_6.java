@@ -1,6 +1,6 @@
-package org.example;
+package org.example.problems.DPK01;
 
-public class DPK01_impl_2 {
+public class DPK01_impl_6 {
     public static String revert(String input) {
         char[] chars = input.toCharArray();
         int left = 0, right = chars.length - 1;
@@ -13,7 +13,6 @@ public class DPK01_impl_2 {
         }
         return new String(chars);
     }
-
     public static void main(String[] args) {
         System.out.println(revert("Hello"));
     }

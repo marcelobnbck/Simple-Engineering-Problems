@@ -1,6 +1,6 @@
-package org.example;
+package org.example.problems.DPK01;
 
-public class DPK01_impl_3 {
+public class DPK01_impl_8 {
     public static String revert(String input) {
         if (input == null || input.length() <= 1) {
             return input;

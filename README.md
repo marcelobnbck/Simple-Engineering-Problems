@@ -6,5 +6,16 @@ A list of engineering problems that are worth solving.
 - Helps to build up coding skills.
 - Helps to build up debugging skills.
 
-Using this practices from this repository from Diego Pacheco:
-https://github.com/diegopacheco/tech-resources/blob/master/simple-engineering-problems.md
+## DPK01 Revert String
+Create a function that can revert a string.
+
+```markdown
+revert("Hello") -> "olleH"
+```
+
+## DPK02 Revert a List
+Create a function that can revert a list.
+
+```markdown
+revert([1,2,3,4,5]) -> [5,4,3,2,1]
+```
