@@ -1,4 +1,4 @@
-package org.example;
+package org.example.problems.DPK01;
 
 public class DPK01_impl_4 {
     public static String revert(String s) {
