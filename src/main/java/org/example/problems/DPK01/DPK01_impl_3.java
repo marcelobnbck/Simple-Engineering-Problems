@@ -4,15 +4,13 @@ public class DPK01_impl_3 {
 
     public static String revert(String input) {
         char[] chars = input.toCharArray();
-        String Word = "";
-        int left = 0;
-        int right = chars.length - 1;
-        while (left < right) {
-            Word = Word + chars[left];
-            left = left + 1;
-            right = right - 1;
+        String invertedWord = "";
+        int size = chars.length;
+        while (size > 0) {
+            invertedWord = invertedWord + chars[size - 1];
+            size = size - 1;
         }
-        return Word;
+        return invertedWord;
     }
 
     public static void main(String[] args) {
