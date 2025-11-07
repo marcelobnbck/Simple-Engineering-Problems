@@ -1,7 +1,6 @@
 package org.example.problems.DPK01;
 
 public class DPK01_impl_3 {
-
     public static String revertOnArray(String input) {
         char[] chars = input.toCharArray();
         String invertedWord = "";
@@ -16,5 +15,4 @@ public class DPK01_impl_3 {
     public static void main(String[] args) {
         System.out.println(revertOnArray("Hello"));
     }
-
 }

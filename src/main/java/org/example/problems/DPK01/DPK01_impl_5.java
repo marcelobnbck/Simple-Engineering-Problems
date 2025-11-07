@@ -3,7 +3,6 @@ package org.example.problems.DPK01;
 import java.util.Stack;
 
 public class DPK01_impl_5 {
-
     public static String revertWithStack(String str) {
         Stack<Character> stack = new Stack<>();
         for (char c : str.toCharArray()) {
@@ -19,5 +18,4 @@ public class DPK01_impl_5 {
     public static void main(String[] args) {
         System.out.println(revertWithStack("Hello"));
     }
-
 }
