@@ -1,10 +1,10 @@
 package org.example.problems.DPK01;
 
 public class DPK01_impl_4 {
-    public static String revertStringbuilderAppend(String str) {
+    public static String revertStringbuilderAppend(String input) {
         StringBuilder sb = new StringBuilder();
-        for (int i = str.length() - 1; i >= 0; i--) {
-            sb.append(str.charAt(i));
+        for (int i = input.length() - 1; i >= 0; i--) {
+            sb.append(input.charAt(i));
         }
         return sb.toString();
     }

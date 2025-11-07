@@ -1,12 +1,12 @@
 package org.example.problems.DPK01;
 
 public class DPK01_impl_6 {
-    public static String reverseRecursive(String str) {
-        if (str.isEmpty()) {
+    public static String reverseRecursive(String input) {
+        if (input.isEmpty()) {
             System.out.println("Empty");
-            return str;
+            return input;
         } else {
-            return reverseRecursive(str.substring(1)) + str.charAt(0);
+            return reverseRecursive(input.substring(1)) + input.charAt(0);
         }
     }
 
