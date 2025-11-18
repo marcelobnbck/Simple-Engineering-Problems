@@ -19,3 +19,17 @@ Create a function that can revert a list.
 ```markdown
 revert([1,2,3,4,5]) -> [5,4,3,2,1]
 ```
+
+## DPK03 Lookup
+Create a function that perform a lookup in a map for a given key you hould have id, name.
+
+```markdown
+lookup(1) -> "John"
+```
+
+Refactor the code so you can lookup for email as well and ge the name and vice versa.
+
+```markdown
+lookup("John") -> "john@john.jhon.com"
+lookup("john@john.jhon.com") -> "John"
+```
