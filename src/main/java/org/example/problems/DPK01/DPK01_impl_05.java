@@ -2,7 +2,7 @@ package org.example.problems.DPK01;
 
 import java.util.Stack;
 
-public class DPK01_impl_5 {
+public class DPK01_impl_05 {
     public static String revertWithStack(String input) {
         Stack<Character> stack = new Stack<>();
         for (char c : input.toCharArray()) {

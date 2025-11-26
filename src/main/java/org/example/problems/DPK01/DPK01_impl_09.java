@@ -1,6 +1,6 @@
 package org.example.problems.DPK01;
 
-public class DPK01_impl_9 {
+public class DPK01_impl_09 {
     public static String revertWithWhile (String input) {
         String invertedWord = "";
         int size = input.length();

@@ -1,6 +1,6 @@
 package org.example.problems.DPK01;
 
-public class DPK01_impl_7 {
+public class DPK01_impl_07 {
     public static String reverseUsingStream(String input) {
         return input
                 .chars()

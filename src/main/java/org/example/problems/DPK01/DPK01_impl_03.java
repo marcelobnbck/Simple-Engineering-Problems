@@ -1,6 +1,6 @@
 package org.example.problems.DPK01;
 
-public class DPK01_impl_3 {
+public class DPK01_impl_03 {
     public static String revertOnArray(String input) {
         char[] chars = input.toCharArray();
         String invertedWord = "";
