@@ -1,6 +1,6 @@
 package org.example.problems.DPK01;
 
-public class DPK01_impl_6 {
+public class DPK01_impl_06 {
     public static String reverseRecursive(String input) {
         if (input.isEmpty()) {
             System.out.println("Empty");
