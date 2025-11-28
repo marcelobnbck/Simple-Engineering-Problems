@@ -2,15 +2,15 @@ package org.example.problems.DPK02;
 
 import java.util.ArrayList;
 
-public class DPK02_impl_4 {
+public class DPK02_impl_01 {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
         ArrayList<Integer> newArray = new ArrayList<>();
-        int i = array.length;
-        while (i > 0) {
-            newArray.add(array[i-1]);
-            i--;
+        for (int i = array.length-1; i>=0; i--) {
+            int result = array[i];
+            newArray.add(result);
         }
         System.out.println(newArray);
     }
 }
+

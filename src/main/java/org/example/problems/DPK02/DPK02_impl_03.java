@@ -2,21 +2,22 @@ package org.example.problems.DPK02;
 
 import java.util.Arrays;
 
-public class DPK02_impl_10 {
-    public static void reversedArray(int[] arr) {
+public class DPK02_impl_03 {
+    public static void reverseArray5(int[] arr) {
         int left = 0;
         int right = arr.length - 1;
         while (left < right) {
             int temp = arr[left];
             arr[left] = arr[right];
             arr[right] = temp;
-            left ++;
-            right --;
+            left++;
+            right--;
         }
     }
+
     public static void main(String[] args) {
-        int[] initialArray = {1, 2, 3, 4, 5};
-        reversedArray(initialArray);
-        System.out.println(Arrays.toString(initialArray));
+        int[] fiveArray = {1, 2, 3, 4, 5};
+        reverseArray5(fiveArray);
+        System.out.println(Arrays.toString(fiveArray));
     }
 }
