@@ -23,8 +23,8 @@ public class DPK03_impl_1_R {
         nameToEmailMap = new HashMap<>();
         emailToNameMap = new HashMap<>();
 
-        User john = new User(1, "John", "john@john.jhon.com");
-        User alice = new User(2, "Alice", "alice@wonderland.net");
+        User john = new User(1, "Marcelo", "marcelobck@gmail.com");
+        User alice = new User(2, "Jose", "jose@gmail.com");
 
         populateMaps(john);
         populateMaps(alice);
@@ -47,8 +47,8 @@ public class DPK03_impl_1_R {
 
     public static void main(String[] args) {
         DPK03_impl_1_R lookupService = new DPK03_impl_1_R();
-        System.out.println("Lookup 'John': " + lookupService.lookup("John"));
-        System.out.println("Lookup 'john@john.jhon.com': " + lookupService.lookup("john@john.jhon.com"));
+        System.out.println("Lookup 'Marcelo': " + lookupService.lookup("Marcelo"));
+        System.out.println("Lookup 'marcelobck@gmail.com': " + lookupService.lookup("marcelobck@gmail.com"));
         System.out.println("Lookup 'Unknown': " + lookupService.lookup("Unknown"));
     }
 }
