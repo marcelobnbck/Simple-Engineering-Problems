@@ -8,7 +8,7 @@ public class DPK03_impl_1 {
 
     public DPK03_impl_1() {
         idToNameMap = new HashMap<>();
-        idToNameMap.put(1, "Marcelo");
+        idToNameMap.put(1, "John");
     }
 
     public String lookup(int id) {
