@@ -9,6 +9,7 @@ public class DPK03_impl_01 {
     public DPK03_impl_01() {
         idToNameMap = new HashMap<>();
         idToNameMap.put(1, "John");
+        idToNameMap.put(2, "Alice");
     }
 
     public String lookup(int id) {
@@ -20,5 +21,6 @@ public class DPK03_impl_01 {
 
         System.out.println("Lookup ID 1: " + lookupService.lookup(1));
         System.out.println("Lookup ID 2: " + lookupService.lookup(2));
+        System.out.println("Lookup ID 3: " + lookupService.lookup(3));
     }
 }
