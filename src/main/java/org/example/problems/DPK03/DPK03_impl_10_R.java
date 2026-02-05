@@ -3,7 +3,7 @@ package org.example.problems.DPK03;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DPK03_impl_02_R {
+public class DPK03_impl_10_R {
     private static class User {
         int id;
         String name;
@@ -19,7 +19,7 @@ public class DPK03_impl_02_R {
     private final Map<String, String> nameToEmailMap;
     private final Map<String, String> emailToNameMap;
 
-    public DPK03_impl_02_R() {
+    public DPK03_impl_10_R() {
         nameToEmailMap = new HashMap<>();
         emailToNameMap = new HashMap<>();
 
@@ -40,7 +40,7 @@ public class DPK03_impl_02_R {
     }
 
     public static void main(String[] args) {
-        DPK03_impl_02_R lookupService = new DPK03_impl_02_R();
+        DPK03_impl_10_R lookupService = new DPK03_impl_10_R();
         System.out.println("Lookup 'John': " + lookupService.lookup("John"));
         System.out.println("Lookup 'john@john.jhon.com': " + lookupService.lookup("john@john.jhon.com"));
         System.out.println("Lookup 'Unknown': " + lookupService.lookup("Unknown"));

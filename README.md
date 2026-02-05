@@ -33,3 +33,27 @@ Refactor the code so you can lookup for email as well and ge the name and vice v
 lookup("John") -> "john@john.jhon.com"
 lookup("john@john.jhon.com") -> "John"
 ```
+
+## DPK04 Simple Pattern Matcher
+Given the following countries and languages:
+
+```markdown
+Usa -> English
+Brazil -> Portuguese
+Spain -> Spanish
+Italy -> Italian
+France -> French
+Germany -> German
+```
+
+Create a function that can return the language for a given country. You cannot use a hashmap or dictionary.
+
+```markdown
+pattern_matcher("Usa") -> "English"
+```
+
+Refactor the code, can you do that without using IF statements?
+
+```markdown
+pattern_matcher("Usa") -> "English"
+```
