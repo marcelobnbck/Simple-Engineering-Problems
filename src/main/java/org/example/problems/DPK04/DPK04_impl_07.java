@@ -23,5 +23,4 @@ public class DPK04_impl_07 {
         System.out.println(pattern_matcher("Usa"));
         System.out.println(pattern_matcher("Brazil"));
     }
-
 }

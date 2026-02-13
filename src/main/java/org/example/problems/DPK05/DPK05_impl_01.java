@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DPK05_impl_01 {
-    // Initializing our HashMaps
     private static Map<String, Integer> power = new HashMap<>() {{
         put("John", 100);
         put("Paul", 90);
@@ -49,7 +48,6 @@ public class DPK05_impl_01 {
             leaderboard.put(name2, leaderboard.get(name2) + 10);
             leaderboard.put(name1, leaderboard.get(name1) - 5);
         }
-
         return winner;
     }
 
