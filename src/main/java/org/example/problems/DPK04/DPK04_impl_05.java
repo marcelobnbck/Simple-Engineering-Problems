@@ -6,6 +6,7 @@ public class DPK04_impl_05 {
 
     public static String pattern_matcher(String country) {
         String[] languages = new String[17];
+
         languages[2] = "Portuguese";
         languages[3] = "German";
         languages[4] = "Spanish";

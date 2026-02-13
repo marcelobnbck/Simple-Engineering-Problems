@@ -27,7 +27,6 @@ public class DPK04_impl_06 {
             case "germany" -> {
                 return "German";
             }
-
         }
         return input;
     }
