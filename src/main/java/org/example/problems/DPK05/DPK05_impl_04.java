@@ -5,11 +5,17 @@ import java.util.Map;
 
 public class DPK05_impl_04 {
     private static final Map<String, Integer> power = Map.of(
-            "John", 100, "Paul", 90, "George", 80, "Ringo", 70
+            "John", 100,
+            "Paul", 90,
+            "George", 80,
+            "Ringo", 70
     );
 
     private static Map<String, Integer> leaderboard = new HashMap<>(Map.of(
-            "John", 0, "Paul", 0, "George", 0, "Ringo", 0
+            "John", 0,
+            "Paul", 0,
+            "George", 0,
+            "Ringo", 0
     ));
 
     private static final Map<Integer, Map<String, Integer>> SCORING_RULES = Map.of(
@@ -23,7 +29,6 @@ public class DPK05_impl_04 {
     }
 
     public static int comparePower(String n1, String n2) {
-        // Integer.compare returns 1, 0, or -1. No 'if' needed!
         return Integer.compare(getPower(n1), getPower(n2));
     }
 
