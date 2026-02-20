@@ -1,10 +1,7 @@
 package org.example.problems.DPK04;
 
-import java.util.Arrays;
-
 public class DPK04_impl_08 {
-
-    public static final String[] COUNTRY = {
+    private static final String[] COUNTRIES = {
             "Brazil",
             "France",
             "Germany",
@@ -13,7 +10,7 @@ public class DPK04_impl_08 {
             "Usa"
     };
 
-    public static final String[] LANGS = {
+    private static final String[] LANGUAGES = {
             "Portuguese",
             "French",
             "German",
@@ -23,8 +20,23 @@ public class DPK04_impl_08 {
     };
 
     public static String pattern_matcher(String country) {
-        int index = Arrays.binarySearch(COUNTRY, country);
-        return (index >= 0) ? LANGS[index] : "Language unknown";
+        int low = 0;
+        int high = COUNTRIES.length - 1;
+        int index = -1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            int diff = Integer.signum(country.compareTo(COUNTRIES[mid]));
+
+            index = switch (diff) {
+                case 0 -> mid;
+                case -1 -> { high = mid - 1; yield index; }
+                case 1 -> { low = mid + 1; yield index; }
+                default -> index;
+            };
+            if (index == mid) break;
+        }
+        return (index >= 0) ? LANGUAGES[index] : "Unknown";
     }
 
     public static void main(String[] args) {

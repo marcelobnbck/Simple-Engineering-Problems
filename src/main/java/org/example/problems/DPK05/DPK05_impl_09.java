@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
-public class DPK05_impl_05 {
+public class DPK05_impl_09 {
     private static final Map<String, Integer> power = Map.of(
             "John", 100,
             "Paul", 90,

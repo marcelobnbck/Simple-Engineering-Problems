@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
 
-public class DPK05_impl_03 {
+public class DPK05_impl_07 {
     private static Map<String, Integer> power = Map.of(
             "John", 100,
             "Paul", 90,
