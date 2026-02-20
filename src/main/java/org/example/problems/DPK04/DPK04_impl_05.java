@@ -16,11 +16,8 @@ public class DPK04_impl_05 {
 
         try {
             String lowercase = country.toLowerCase();
-
             int hash = (lowercase.charAt(0) + lowercase.charAt(lowercase.length() - 1)) % 17;
-
             String result = languages[hash];
-
             return Objects.requireNonNullElse(result, "Unknown");
         } catch (Exception e) {
             return "Invalid Input";
@@ -30,5 +27,6 @@ public class DPK04_impl_05 {
     public static void main(String[] args) {
         System.out.println(pattern_matcher("Usa"));
         System.out.println(pattern_matcher("Brazil"));
+        System.out.println(pattern_matcher("Japan"));
     }
 }

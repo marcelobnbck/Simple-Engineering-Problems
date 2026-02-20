@@ -3,7 +3,7 @@ package org.example.problems.DPK05;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DPK05_impl_02 {
+public class DPK05_impl_10 {
     private static Map<String, Integer> power = new HashMap<>() {{
         put("John", 100);
         put("Paul", 90);
@@ -31,12 +31,10 @@ public class DPK05_impl_02 {
     public static String play(String n1, String n2) {
         String winner = getWinner(n1, n2);
         leaderboard.put(n1, leaderboard.get(n1)
-                + (winner.equals("Draw")
-                ? 5
+                + (winner.equals("Draw") ? 5
                 : (winner.equals(n1) ? 10 : -5)));
         leaderboard.put(n2, leaderboard.get(n2)
-                + (winner.equals("Draw")
-                ? 5
+                + (winner.equals("Draw") ? 5
                 : (winner.equals(n2) ? 10 : -5)));
         return winner;
     }

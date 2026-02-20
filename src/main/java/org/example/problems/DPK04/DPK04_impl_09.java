@@ -14,7 +14,6 @@ public class DPK04_impl_09 {
         try {
             int maskedIndex = input.charAt(0) & 0x0F;
             String result = langs[maskedIndex];
-
             return java.util.Objects.requireNonNullElse(result, "Unknown");
         } catch (Exception e) {
             return "Invalid Input";
@@ -24,5 +23,6 @@ public class DPK04_impl_09 {
     public static void main(String[] args) {
         System.out.println(pattern_matcher("Usa"));
         System.out.println(pattern_matcher("Brazil"));
+        System.out.println(pattern_matcher("Japan"));
     }
 }

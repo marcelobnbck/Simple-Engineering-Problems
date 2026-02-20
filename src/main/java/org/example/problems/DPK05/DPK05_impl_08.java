@@ -3,7 +3,7 @@ package org.example.problems.DPK05;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DPK05_impl_04 {
+public class DPK05_impl_08 {
     private static final Map<String, Integer> power = Map.of(
             "John", 100,
             "Paul", 90,
@@ -49,6 +49,6 @@ public class DPK05_impl_04 {
     public static void main(String[] args) {
         play("John", "Paul");
         play("John", "Ringo");
-        System.out.println("Final Leaderboard: " + leaderboard);
+        System.out.println(leaderboard);
     }
 }
