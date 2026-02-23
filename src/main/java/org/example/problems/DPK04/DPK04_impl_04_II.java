@@ -13,13 +13,13 @@ public class DPK04_impl_04_II {
         languages[9] = "Italian";
 
         try {
-            int maskedIndex = country.charAt(0) & 0x0F;
             /**
              * Can use number 15 instead of 0x0F, as both represent the same value
              * (15 in decimal and 0x0F in hexadecimal). But using 0x0F it's clearer
              * to indicate that we are performing a bitwise operation.
              */
-            //int maskedIndex = country.charAt(0) & 15;
+            //int maskedIndex = country.charAt(0) & 0x0F;
+            int maskedIndex = country.charAt(0) & 15;
             String result = languages[maskedIndex];
             return java.util.Objects.requireNonNullElse(result, "Unknown");
         } catch (Exception e) {
