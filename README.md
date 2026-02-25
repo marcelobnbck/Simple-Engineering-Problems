@@ -112,3 +112,14 @@ leaderboard -> {
 ```
 
 Now can you refactor your code and do less ifs? Maybe introduce pointers?
+
+## DPK06 Tokenizer
+Create a function that can tokenize a string based on a token.
+
+```markdown
+tokenize("Hello,World,How,Are,You", ",") -> ["Hello", "World", "How", "Are", "You"]
+tokenize("Hello World How Are You", " ") -> ["Hello", "World", "How", "Are", "You"]
+tokenize("Hello-World-How-Are-You", "-") -> ["Hello", "World", "How", "Are", "You"]
+```
+
+Can you refactor your code and do that without using any prebuild function like split?
