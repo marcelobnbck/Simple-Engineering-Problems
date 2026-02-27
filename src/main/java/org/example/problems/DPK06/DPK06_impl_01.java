@@ -7,7 +7,6 @@ public class DPK06_impl_01 {
         if (input == null || delimiter == null) {
             return new String[0];
         }
-        //return input.split(java.util.regex.Pattern.quote(delimiter));
         return input.split(delimiter);
     }
 
