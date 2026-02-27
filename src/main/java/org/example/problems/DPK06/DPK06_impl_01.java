@@ -7,7 +7,8 @@ public class DPK06_impl_01 {
         if (input == null || delimiter == null) {
             return new String[0];
         }
-        return input.split(java.util.regex.Pattern.quote(delimiter));
+        //return input.split(java.util.regex.Pattern.quote(delimiter));
+        return input.split(delimiter);
     }
 
     public static void main(String[] args) {
@@ -19,6 +20,12 @@ public class DPK06_impl_01 {
         ));
         System.out.println(Arrays.toString(
                 tokenizer("Hello-World-How-Are-You", "-")
+        ));
+        System.out.println(Arrays.toString(
+                tokenizer("Hello.World.How.Are.You", null)
+        ));
+        System.out.println(Arrays.toString(
+                tokenizer(null, ".")
         ));
     }
 }
