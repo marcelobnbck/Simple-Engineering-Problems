@@ -1,26 +1,36 @@
 package org.example.problems.DPK06;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class DPK06_impl_03 {
-
     public static String[] tokenizer(String input, String delimiter) {
         if (input == null || delimiter == null) {
             return new String[0];
         }
 
-        List<String> result = new ArrayList<>();
-        int start = 0;
-        int end;
-
-        while ((end = input.indexOf(delimiter, start)) != -1) {
-            result.add(input.substring(start, end));
-            start = end + delimiter.length();
+        char delimiterChar = delimiter.charAt(0);
+        int tokenCounter = 1;
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == delimiterChar) {
+                tokenCounter++;
+            }
         }
-        result.add(input.substring(start));
-        return result.toArray(new String[0]);
+
+        String[] result = new String[tokenCounter];
+        String currentToken = "";
+        int arrayIndex = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if (c == delimiterChar) {
+                result[arrayIndex++] = currentToken;
+                currentToken = "";
+            } else {
+                currentToken += c;
+            }
+        }
+
+        result[arrayIndex] = currentToken;
+        return result;
     }
 
     public static void main(String[] args) {
