@@ -25,16 +25,13 @@ public class DPK05_impl_05 {
 
     public static String getWinner(String name1, String name2) {
         int diff = getPower(name1) - getPower(name2);
-
-        return diff == 0
-                ? "Draw"
-                : (diff > 0 ? name1 : name2);
+        return diff == 0 ? "Draw" : (diff > 0 ? name1 : name2);
     }
 
     public static String play(String name1, String name2) {
         String winner = getWinner(name1, name2);
-        BiConsumer<String, Integer> updateScore =
-                (name, delta) -> leaderboard.merge(name, delta, Integer::sum);
+        BiConsumer<String, Integer>
+                updateScore = (name, delta) -> leaderboard.merge(name, delta, Integer::sum);
         int p1 = getPower(name1);
         int p2 = getPower(name2);
         int diff = Integer.compare(p1, p2);

@@ -32,9 +32,8 @@ public class DPK05_impl_03 {
         String winner = getWinner(n1, n2);
         boolean isDraw = winner.equals("Draw");
 
-        BiFunction<String, Integer, Integer> scoreCalc = (
-                name,
-                current) ->
+        BiFunction<String, Integer, Integer>
+                scoreCalc = (name, current) ->
                 current + (isDraw ? 5 : (name.equals(winner) ? 10 : -5)
         );
 
