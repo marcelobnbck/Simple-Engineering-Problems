@@ -1,47 +1,34 @@
 package org.example.problems.DPK06;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DPK06_impl_03 {
-    public static String[] tokenizer(String input, String delimiter) {
-        if (input == null || delimiter == null) {
-            return new String[0];
-        }
-
-        char delimiterChar = delimiter.charAt(0);
-        int tokenCounter = 1;
-        for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == delimiterChar) {
-                tokenCounter++;
-            }
-        }
-
-        String[] result = new String[tokenCounter];
-        String currentToken = "";
-        int arrayIndex = 0;
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-            if (c == delimiterChar) {
-                result[arrayIndex++] = currentToken;
-                currentToken = "";
-            } else {
-                currentToken += c;
-            }
-        }
-
-        result[arrayIndex] = currentToken;
+    public static List<String> tokenizer(String text, String token) {
+        List<String> result = new ArrayList<>();
+        tokenize(text, token.charAt(0), result);
         return result;
     }
 
+    private static void tokenize(String text, char delimiter, List<String> result) {
+        int index = -1;
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == delimiter) {
+                index = i;
+                break;
+            }
+        }
+        if (index == -1) {
+            result.add(text);
+            return;
+        }
+        result.add(text.substring(0, index));
+        tokenize(text.substring(index + 1), delimiter, result);
+    }
+
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(
-                tokenizer("Hello,World,How,Are,You", ",")
-        ));
-        System.out.println(Arrays.toString(
-                tokenizer("Hello World How Are You", " ")
-        ));
-        System.out.println(Arrays.toString(
-                tokenizer("Hello-World-How-Are-You", "-")
-        ));
+        System.out.println(tokenizer("Hello,World,How,Are,You", ","));
+        System.out.println(tokenizer("Hello World How Are You", " "));
+        System.out.println(tokenizer("Hello-World-How-Are-You", "-"));
     }
 }
