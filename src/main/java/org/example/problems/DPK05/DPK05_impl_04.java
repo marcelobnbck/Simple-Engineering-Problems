@@ -19,9 +19,9 @@ public class DPK05_impl_04 {
     ));
 
     private static final Map<Integer, Map<String, Integer>> SCORING_RULES = Map.of(
-            1,  Map.of("winner", 10, "loser", -5),  // P1 Wins
-            -1, Map.of("winner", 10, "loser", -5),  // P2 Wins
-            0,  Map.of("winner", 5,  "loser", 5)    // Draw
+            1,  Map.of("winner", 10, "loser", -5),
+            -1, Map.of("winner", 10, "loser", -5),
+            0,  Map.of("winner", 5,  "loser", 5)
     );
 
     public static int getPower(String name) {
@@ -35,12 +35,8 @@ public class DPK05_impl_04 {
     public static void play(String n1, String n2) {
         int result = comparePower(n1, n2);
 
-        int p1Points = (result >= 0)
-                ? SCORING_RULES.get(result).get("winner")
-                : SCORING_RULES.get(-result).get("loser");
-        int p2Points = (result <= 0)
-                ? SCORING_RULES.get(-result).get("winner")
-                : SCORING_RULES.get(result).get("loser");
+        int p1Points = (result >= 0) ? SCORING_RULES.get(result).get("winner") : SCORING_RULES.get(-result).get("loser");
+        int p2Points = (result <= 0) ? SCORING_RULES.get(-result).get("winner") : SCORING_RULES.get(result).get("loser");
 
         leaderboard.merge(n1, p1Points, Integer::sum);
         leaderboard.merge(n2, p2Points, Integer::sum);
