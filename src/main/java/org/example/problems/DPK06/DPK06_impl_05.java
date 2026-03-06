@@ -3,15 +3,13 @@ package org.example.problems.DPK06;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DPK06_impl_04 {
+public class DPK06_impl_05 {
     public static List<String> tokenizer(String text, String token) {
-
         List<String> tokens = new ArrayList<>();
         StringBuilder buffer = new StringBuilder();
         char delimiter = token.charAt(0);
 
         for (char c : text.toCharArray()) {
-
             switch (c) {
                 case ',':
                 case ' ':
@@ -21,14 +19,11 @@ public class DPK06_impl_04 {
                         buffer.setLength(0);
                         break;
                     }
-
                 default:
                     buffer.append(c);
             }
         }
-
         tokens.add(buffer.toString());
-
         return tokens;
     }
 

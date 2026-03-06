@@ -1,37 +1,26 @@
 package org.example.problems.DPK06;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DPK06_impl_02 {
-
-    public static String[] tokenizer(String input, String delimiter) {
-        if (input == null || delimiter == null) {
-            return new String[0];
-        }
-
+    public static List<String> tokenizer(String text, String token) {
         List<String> result = new ArrayList<>();
         int start = 0;
-        int end;
 
-        while ((end = input.indexOf(delimiter, start)) != -1) {
-            result.add(input.substring(start, end));
-            start = end + delimiter.length();
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == token.charAt(0)) {
+                result.add(text.substring(start, i));
+                start = i + 1;
+            }
         }
-        result.add(input.substring(start));
-        return result.toArray(new String[0]);
+        result.add(text.substring(start));
+        return result;
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(
-                tokenizer("Hello,World,How,Are,You", ",")
-        ));
-        System.out.println(Arrays.toString(
-                tokenizer("Hello World How Are You", " ")
-        ));
-        System.out.println(Arrays.toString(
-                tokenizer("Hello-World-How-Are-You", "-")
-        ));
+        System.out.println(tokenizer("Hello,World,How,Are,You", ","));
+        System.out.println(tokenizer("Hello World How Are You", " "));
+        System.out.println(tokenizer("Hello-World-How-Are-You", "-"));
     }
 }
