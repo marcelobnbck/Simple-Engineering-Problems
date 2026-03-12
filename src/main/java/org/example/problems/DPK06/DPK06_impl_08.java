@@ -6,15 +6,15 @@ import java.util.List;
 public class DPK06_impl_08 {
     public static List<String> tokenizer(String text, String token) {
         List<String> result = new ArrayList<>();
-        while (text != token) {
-            int index = text.indexOf(token);
-            if (index == -1) {
-                result.add(text);
-                break;
+        int start = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == token.charAt(0)) {
+                result.add(text.substring(start, i));
+                start = i + 1;
             }
-            result.add(text.substring(0, index));
-            text = text.substring(index + token.length());
         }
+        result.add(text.substring(start));
         return result;
     }
 
