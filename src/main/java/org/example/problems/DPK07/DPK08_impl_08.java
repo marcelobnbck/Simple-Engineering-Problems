@@ -4,17 +4,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class DPK07_N {
+public class DPK08_impl_08 {
     public static <T> List<List<T>> groupBy3(List<T> list, int groupSize) {
         List<List<T>> result = new ArrayList<>();
-        List<List<T>> groups = new ArrayList<>();
 
-        for (int i = 0; i < list.size(); i ++) {
-            groups = groups(i);
-            if (i == groupSize) {
+        for (int i = 0; i < list.size(); i += groupSize) {
+            List<T> group3 = new ArrayList<>();
 
+            for (int j = i; j < i + groupSize && j < list.size(); j++) {
+                group3.add(list.get(j));
             }
+            result.add(group3);
         }
+
         return result;
     }
 
