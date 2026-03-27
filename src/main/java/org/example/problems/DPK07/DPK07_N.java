@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class DPK07_impl_02 {
+public class DPK07_N {
     public static <T> List<List<T>> groupBy3(List<T> list, int groupSize) {
         List<List<T>> result = new ArrayList<>();
+        List<List<T>> groups = new ArrayList<>();
 
-        for (int i = 0; i < list.size(); i += groupSize) {
-            int end = Math.min(i + groupSize, list.size());
-            result.add(new ArrayList<>(list.subList(i, end)));
+        for (int i = 0; i < list.size(); i ++) {
+            groups = groups(i);
+            if (i == groupSize) {
+
+            }
         }
         return result;
     }
