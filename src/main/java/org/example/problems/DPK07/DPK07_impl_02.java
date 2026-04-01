@@ -16,8 +16,29 @@ public class DPK07_impl_02 {
     }
 
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        List<String> letters = Arrays.asList("a","b","c","d","e","f","g","h","i","j");
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        numbers.add(6);
+        numbers.add(7);
+        numbers.add(8);
+        numbers.add(9);
+        numbers.add(10);
+
+        List<String> letters = new ArrayList<>();
+        letters.add("a");
+        letters.add("b");
+        letters.add("c");
+        letters.add("d");
+        letters.add("e");
+        letters.add("f");
+        letters.add("g");
+        letters.add("h");
+        letters.add("i");
+        letters.add("j");
         System.out.println(groupBy3(numbers, 3));
         System.out.println(groupBy3(letters, 3));
     }
