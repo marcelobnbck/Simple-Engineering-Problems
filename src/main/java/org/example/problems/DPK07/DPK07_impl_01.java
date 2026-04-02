@@ -1,7 +1,6 @@
 package org.example.problems.DPK07;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DPK07_impl_01 {
