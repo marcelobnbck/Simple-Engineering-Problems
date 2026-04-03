@@ -1,7 +1,6 @@
 package org.example.problems.DPK07;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DPK07_impl_09 {
@@ -25,9 +24,16 @@ public class DPK07_impl_09 {
     }
 
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        List<String> letters = Arrays.asList("a","b","c","d","e","f","g","h","i","j");
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            numbers.add(i);
+        }
         System.out.println(groupBy3(numbers, 3));
+
+        List<String> letters = new ArrayList<>();
+        for (char c = 'a'; c <= 'j'; c++) {
+            letters.add(String.valueOf(c));
+        }
         System.out.println(groupBy3(letters, 3));
     }
 }
