@@ -1,11 +1,10 @@
 package org.example.problems.DPK07;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DPK07_impl_04 {
-    public static <T> List<List<T>> groupByWhile(List<T> list, int size) {
+    public static <T> List<List<T>> groupBy3(List<T> list, int size) {
         List<List<T>> result = new ArrayList<>();
         int index = 0;
 
@@ -24,9 +23,16 @@ public class DPK07_impl_04 {
     }
 
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        List<String> letters = Arrays.asList("a","b","c","d","e","f","g","h","i","j");
-        System.out.println(groupByWhile(numbers, 3));
-        System.out.println(groupByWhile(letters, 3));
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            numbers.add(i);
+        }
+        System.out.println(groupBy3(numbers, 3));
+
+        List<String> letters = new ArrayList<>();
+        for (char c = 'a'; c <= 'j'; c++) {
+            letters.add(String.valueOf(c));
+        }
+        System.out.println(groupBy3(letters, 3));
     }
 }
