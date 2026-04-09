@@ -6,11 +6,11 @@ import java.util.List;
 public class DPK08_impl_02 {
     public static List<Integer> multiplier(int[] input, int number) {
         List<Integer> indexResult = new ArrayList<>();
-        int i = 4;
-        while (i <= 4) {
-            indexResult.add(input[i] * number);
-            i++;
-            //input[i] *= number;
+        while (number > 0) {
+            for (int i = 0; i < input.length; i++) {
+                indexResult.add(input[i] * number);
+            }
+            number--;
         }
         return indexResult;
     }
