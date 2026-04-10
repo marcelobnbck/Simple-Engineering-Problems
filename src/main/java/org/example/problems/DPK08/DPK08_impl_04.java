@@ -3,20 +3,18 @@ package org.example.problems.DPK08;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DPK08_impl_02 {
-    public static List<Integer> whileMultiplier(int[] input, int number) {
+public class DPK08_impl_04 {
+    public static List<Integer> forEachMultiplier(int[] input, int number) {
         List<Integer> result = new ArrayList<>();
-        int index = 0;
-        while (index < input.length) {
-            result.add(input[index] * number);
-            index++;
+        for (int i : input) {
+            result.add(i * number);
         }
         return result;
     }
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
-        List<Integer> result = whileMultiplier(array, 2);
+        List<Integer> result = forEachMultiplier(array, 2);
         System.out.println(result);
     }
 }
