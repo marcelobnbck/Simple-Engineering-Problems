@@ -6,14 +6,13 @@ import java.util.List;
 public class DPK08_impl_02 {
     public static List<Integer> multiplier(int[] input, int number) {
         List<Integer> indexResult = new ArrayList<>();
-        while (number > 0) {
-            for (int i = 0; i < input.length; i++) {
-                indexResult.add(input[i] * number);
-            }
-            number--;
+        int index = 0;
+        while (index < input.length) {
+            indexResult.add(input[index++]);
         }
-        return indexResult;
-    }
+        for (int i = 0; i < indexResult.size(); i++) {
+            indexResult.set(i, indexResult.get(i) * number);
+        }
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
