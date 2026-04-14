@@ -6,17 +6,20 @@ import java.util.List;
 
 public class DPK08_impl_05 {
     public static List<Integer> iteratorMultiplier(int[] input, int number) {
-        List<Integer> inputList = new ArrayList<>();
+        List<Integer> indexResult = new ArrayList<>();
+        List<Integer> tmpList = new ArrayList<>();
         for (int i : input) {
-            inputList.add(i);
+            tmpList.add(i);
         }
 
-        List<Integer> indexResult = new ArrayList<>();
-        Iterator<Integer> it = inputList.iterator();
-        while (it.hasNext()) {
-            indexResult.add(it.next() * number);
+        Iterator<Integer> iterator = tmpList.iterator();
+        List<Integer> result = new ArrayList<>();
+
+        while (iterator.hasNext()) {
+            Integer value = iterator.next();
+            result.add(value * number);
         }
-        return indexResult;
+        return result;
     }
 
     public static void main(String[] args) {
