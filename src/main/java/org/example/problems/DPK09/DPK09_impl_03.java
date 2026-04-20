@@ -3,22 +3,23 @@ package org.example.problems.DPK09;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DPK09_impl_02 {
-    public static List<Integer> whileFilter(int[] input, int number) {
+public class DPK09_impl_03 {
+    public static List<Integer> doWhileFilter(int[] input, int number) {
         List<Integer> result = new ArrayList<>();
         int index = 0;
-        while (index < input.length) {
+        do {
             if (input[index] % number == 0) {
                 result.add(input[index]);
             }
             index++;
         }
-        return result;
+        while (index < input.length);
+        return  result;
     }
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        List<Integer> result = whileFilter(array, 2);
+        List<Integer> result = doWhileFilter(array, 2);
         System.out.println(result);
     }
 }
