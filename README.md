@@ -159,3 +159,14 @@ filter([1,2,3,4,5,6,7,8,9,10], (x) => x % 2 == 0) -> [2,4,6,8,10]
 The filter function should receive a collection (list or array) and a function that will be apply to each element of the collection.
 
 Now refactor the code and do not use any prebuild function.
+
+## DPK10 Reduce
+Create a function that can reduce a list to a single value.
+
+```markdown
+reduce([1,2,3,4,5], (acc, x) => acc + x, 0) -> 15
+```
+
+The reduce function should receive a collection (list or array), a function that will be apply to each element of the collection and an initial value.
+
+Now refactor the code and do not use any prebuild function.
