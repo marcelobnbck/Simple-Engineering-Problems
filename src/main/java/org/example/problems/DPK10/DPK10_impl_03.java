@@ -1,12 +1,13 @@
 package org.example.problems.DPK10;
 
-public class DPK10_impl_02 {
+public class DPK10_impl_03 {
     public static Integer reduce(int[] input) {
         int acc = 0;
         int i = 0;
-        do {
+        while (i < input.length) {
             acc += input[i];
-        } while (++i < input.length);
+            i++;
+        }
         return acc;
     }
 
