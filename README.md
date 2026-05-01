@@ -170,3 +170,18 @@ reduce([1,2,3,4,5], (acc, x) => acc + x, 0) -> 15
 The reduce function should receive a collection (list or array), a function that will be apply to each element of the collection and an initial value.
 
 Now refactor the code and do not use any prebuild function.
+
+## DPK11 Replace
+Create a function that can replace a given token in a string.
+
+```markdown
+replace("Hello,World,How,Are,You", ",", "-") -> "Hello-World-How-Are-You"
+```
+
+The replace function should receive a string, a token to be replaced and a new token. Refactor the code to not only replace one token but a string that you can receive by parameter.
+
+```markdown
+replace("Hello,World,How,Are,You", ",World,", "-") -> "Hello-How-Are-You"
+```
+
+Now refactor the code and do not use any prebuild function.
