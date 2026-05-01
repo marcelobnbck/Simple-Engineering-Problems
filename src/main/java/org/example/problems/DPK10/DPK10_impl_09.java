@@ -1,17 +1,19 @@
 package org.example.problems.DPK10;
 
-public class DPK10_impl_07 {
-    public static Integer reduceFor2nd(int[] input) {
+public class DPK10_impl_09 {
+    public static Integer reduceWhile2nd(int[] input) {
         int acc = 0;
-        for(int i = 0; i < input.length; i++){
+        int i = 0;
+        while (i < input.length) {
             acc += input[i];
+            i++;
         }
         return acc;
     }
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
-        Integer result = reduceFor2nd(array);
+        Integer result = reduceWhile2nd(array);
         System.out.println(result);
     }
 }
