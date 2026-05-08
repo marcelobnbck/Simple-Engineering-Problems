@@ -1,15 +1,15 @@
 package org.example.problems.DPK11;
 
 public class DPK11_impl_02 {
-    public static String replace(String text, String target, String replacement) {
+    public static String replaceStringWhile(String text, String target, String replacement) {
         String result = "";
         int i = 0;
 
         while (i < text.length()) {
             boolean match = true;
+
             if (i + target.length() <= text.length()) {
                 int j = 0;
-
                 while (j < target.length()) {
                     if (text.charAt(i + j) != target.charAt(j)) {
                         match = false;
@@ -33,7 +33,8 @@ public class DPK11_impl_02 {
     }
 
     public static void main(String[] args) {
-        System.out.println(replace("Hello,World,How,Are,You", ",", "-"));
-        System.out.println(replace("Hello,World,How,Are,You", ",World,", "-"));
+        System.out.println(replaceStringWhile("Hello,World,How,Are,You", ",", "-"));
+        System.out.println(replaceStringWhile("Hello,World,How,Are,You", ",World,", "-"));
     }
 }
+

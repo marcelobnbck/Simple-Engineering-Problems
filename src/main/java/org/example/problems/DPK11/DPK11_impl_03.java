@@ -1,15 +1,16 @@
 package org.example.problems.DPK11;
 
 public class DPK11_impl_03 {
-    public static String replace(String text, String target, String replacement) {
-        String result = "";
+    public static String replaceStringBuilderWhile(String text, String token, String replacement) {
+        StringBuilder result = new StringBuilder();
+        int i = 0;
 
-        for (int i = 0; i < text.length(); i++) {
+        while (i < text.length()) {
             boolean match = true;
 
-            if (i + target.length() <= text.length()) {
-                for (int j = 0; j < target.length(); j++) {
-                    if (text.charAt(i + j) != target.charAt(j)) {
+            if (i + token.length() <= text.length()) {
+                for (int j = 0; j < token.length(); j++) {
+                    if (text.charAt(i + j) != token.charAt(j)) {
                         match = false;
                         break;
                     }
@@ -19,17 +20,21 @@ public class DPK11_impl_03 {
             }
 
             if (match) {
-                result += replacement;
-                i += target.length() - 1;
+                for (int j = 0; j < replacement.length(); j++) {
+                    result.append(replacement.charAt(j));
+                }
+                i += token.length();
             } else {
-                result += text.charAt(i);
+                result.append(text.charAt(i));
+                i++;
             }
         }
-        return result;
+        return result.toString();
     }
 
     public static void main(String[] args) {
-        System.out.println(replace("Hello,World,How,Are,You", ",", "-"));
-        System.out.println(replace("Hello,World,How,Are,You", ",World,", "-"));
+        System.out.println(replaceStringBuilderWhile("Hello,World,How,Are,You", ",", "-"));
+        System.out.println(replaceStringBuilderWhile("Hello,World,How,Are,You", ",World,", "-"));
     }
 }
+

@@ -1,7 +1,7 @@
 package org.example.problems.DPK11;
 
 public class DPK11_impl_01 {
-    public static String replace(String text, String target, String replacement) {
+    public static String replaceFor(String text, String target, String replacement) {
         String result = "";
 
         for (int i = 0; i < text.length(); i++) {
@@ -29,7 +29,8 @@ public class DPK11_impl_01 {
     }
 
     public static void main(String[] args) {
-        System.out.println(replace("Hello,World,How,Are,You", ",", "-"));
-        System.out.println(replace("Hello,World,How,Are,You", ",World,", "-"));
+        System.out.println(replaceFor("Hello,World,How,Are,You", ",", "-"));
+        System.out.println(replaceFor("Hello,World,How,Are,You", ",World,", "-"));
     }
 }
+
