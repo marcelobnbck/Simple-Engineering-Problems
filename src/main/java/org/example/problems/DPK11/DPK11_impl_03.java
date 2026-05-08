@@ -1,7 +1,7 @@
 package org.example.problems.DPK11;
 
-public class DPK11_impl_05 {
-    public static String replace(String text, String token, String replacement) {
+public class DPK11_impl_03 {
+    public static String replaceStringBuilderWhile(String text, String token, String replacement) {
         StringBuilder result = new StringBuilder();
         int i = 0;
 
@@ -33,7 +33,7 @@ public class DPK11_impl_05 {
     }
 
     public static void main(String[] args) {
-        System.out.println(replace("Hello,World,How,Are,You", ",", "-"));
-        System.out.println(replace("Hello,World,How,Are,You", ",World,", "-"));
+        System.out.println(replaceStringBuilderWhile("Hello,World,How,Are,You", ",", "-"));
+        System.out.println(replaceStringBuilderWhile("Hello,World,How,Are,You", ",World,", "-"));
     }
 }
