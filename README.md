@@ -6,6 +6,8 @@ A list of engineering problems that are worth solving.
 - Helps to build up coding skills.
 - Helps to build up debugging skills.
 
+---
+
 ## DPK01 Revert String
 Create a function that can revert a string.
 
@@ -13,12 +15,16 @@ Create a function that can revert a string.
 revert("Hello") -> "olleH"
 ```
 
+---
+
 ## DPK02 Revert a List
 Create a function that can revert a list.
 
 ```markdown
 revert([1,2,3,4,5]) -> [5,4,3,2,1]
 ```
+
+---
 
 ## DPK03 Lookup
 Create a function that perform a lookup in a map for a given key you hould have id, name.
@@ -33,6 +39,8 @@ Refactor the code so you can lookup for email as well and ge the name and vice v
 lookup("John") -> "john@john.jhon.com"
 lookup("john@john.jhon.com") -> "John"
 ```
+
+---
 
 ## DPK04 Simple Pattern Matcher
 Given the following countries and languages:
@@ -57,6 +65,8 @@ Refactor the code, can you do that without using IF statements?
 ```markdown
 pattern_matcher("Usa") -> "English"
 ```
+
+---
 
 ## DPK05 Pointers
 Considering the following hash map:
@@ -113,6 +123,8 @@ leaderboard -> {
 
 Now can you refactor your code and do less ifs? Maybe introduce pointers?
 
+---
+
 ## DPK06 Tokenizer
 Create a function that can tokenize a string based on a token.
 
@@ -123,6 +135,8 @@ tokenize("Hello-World-How-Are-You", "-") -> ["Hello", "World", "How", "Are", "Yo
 ```
 
 Can you refactor your code and do that without using any prebuild function like split?
+
+---
 
 ## DPK07 Group By
 Create a function that can group a list of numbers by a given number.
@@ -138,6 +152,8 @@ group_by(["a","b","c","d","e","f","g","h","i","j"], 3) -> [["a","b","c"], ["d","
 
 Can you refactor the code and create your own group by function, do not use any prebuild function.
 
+---
+
 ## DPK08 Map
 Create a function that can map a function execution to each element of a list, return a new list.
 
@@ -148,6 +164,8 @@ map([1,2,3,4,5], (x) => x * 2) -> [2,4,6,8,10]
 The map function should receive a collection(list or array) and a function that will be apply to each element of the collection. 
 
 Now refactor the code and do not use any prebuild function.
+
+---
 
 ## DPK09 Filter
 Create a function that can filter a list based on a given condition.
@@ -160,6 +178,8 @@ The filter function should receive a collection (list or array) and a function t
 
 Now refactor the code and do not use any prebuild function.
 
+---
+
 ## DPK10 Reduce
 Create a function that can reduce a list to a single value.
 
@@ -170,6 +190,8 @@ reduce([1,2,3,4,5], (acc, x) => acc + x, 0) -> 15
 The reduce function should receive a collection (list or array), a function that will be apply to each element of the collection and an initial value.
 
 Now refactor the code and do not use any prebuild function.
+
+---
 
 ## DPK11 Replace
 Create a function that can replace a given token in a string.
@@ -185,6 +207,8 @@ replace("Hello,World,How,Are,You", ",World,", "-") -> "Hello-How-Are-You"
 ```
 
 Now refactor the code and do not use any prebuild function.
+
+---
 
 ## DPK12 Sort
 Create a function that can sort a list of numbers. The implementation should be a Bubble Sort(good to learn but terrible to use in production).
