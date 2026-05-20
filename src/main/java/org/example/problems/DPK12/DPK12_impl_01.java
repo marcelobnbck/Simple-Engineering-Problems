@@ -7,7 +7,11 @@ public class DPK12_impl_01 {
         int[] sorted = input.clone();
         for (int i = 0; i < sorted.length; i++) {
             for (int j = 0; j < sorted.length; j++) {
-                // logic
+                if (sorted[i] < sorted[j]) {
+                    int temp = sorted[i];
+                    sorted[i] = sorted[j];
+                    sorted[j] = temp;
+                }
             }
         }
         return sorted;
