@@ -5,6 +5,10 @@ import java.util.Arrays;
 public class DPK12_impl_03 {
     public static int[] bubbleSortSwap(int[] input) {
         int[] sorted = new int[input.length];
+        for (int i = 0; i < input.length; i++) {
+            sorted[i] = input[i];
+        }
+
 
         return sorted;
     }
