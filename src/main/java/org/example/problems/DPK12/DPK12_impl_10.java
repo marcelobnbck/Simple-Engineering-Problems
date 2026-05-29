@@ -29,6 +29,7 @@ public class DPK12_impl_10 {
         } while (i < sorted.length - 1);
 
         return sorted;
+
     }
 
     public static void main(String[] args) {
