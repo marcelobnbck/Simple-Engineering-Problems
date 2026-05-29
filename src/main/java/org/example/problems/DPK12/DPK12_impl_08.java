@@ -2,12 +2,14 @@ package org.example.problems.DPK12;
 
 import java.util.Arrays;
 
-public class DPK12_impl_01 {
+public class DPK12_impl_08 {
     public static int[] bubbleSortFor(int[] input) {
         int[] sorted = new int[input.length];
+
         for (int i = 0; i < input.length; i++) {
             sorted[i] = input[i];
         }
+
         for (int i = 0; i < sorted.length; i++) {
             for (int j = i + 1; j < sorted.length; j++) {
                 if (sorted[i] > sorted[j]) {
@@ -17,6 +19,7 @@ public class DPK12_impl_01 {
                 }
             }
         }
+
         return sorted;
     }
 

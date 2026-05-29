@@ -2,32 +2,32 @@ package org.example.problems.DPK12;
 
 import java.util.Arrays;
 
-public class DPK12_impl_04 {
-    public static int[] bubbleSortWhile(int[] input) {
+public class DPK12_impl_06 {
+    public static int[] bubbleSortDoWhile(int[] input) {
         int[] sorted = new int[input.length];
         int i = 0;
-        while (i < input.length) {
+        do {
             sorted[i] = input[i];
             i++;
-        }
+        } while (i < input.length);
         i = 0;
-        while (i < sorted.length - 1) {
+        do {
             int j = 0;
-            while (j < sorted.length - 1 - i) {
+            do {
                 if (sorted[j] > sorted[j + 1]) {
                     int temp = sorted[j];
                     sorted[j] = sorted[j + 1];
                     sorted[j + 1] = temp;
                 }
                 j++;
-            }
+            } while (j < sorted.length - 1 - i);
             i++;
-        }
+        } while (i < sorted.length - 1);
         return sorted;
     }
 
     public static void main(String[] args) {
         int[] array = {5, 4, 3, 2, 1};
-        System.out.println(Arrays.toString(bubbleSortWhile(array)));
+        System.out.println(Arrays.toString(bubbleSortDoWhile(array)));
     }
 }
