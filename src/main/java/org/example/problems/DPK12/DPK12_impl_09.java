@@ -2,7 +2,7 @@ package org.example.problems.DPK12;
 
 import java.util.Arrays;
 
-public class DPK12_impl_04 {
+public class DPK12_impl_09 {
     public static int[] bubbleSortWhile(int[] input) {
         int[] sorted = new int[input.length];
         int i = 0;

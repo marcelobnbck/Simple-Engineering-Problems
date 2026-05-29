@@ -3,7 +3,7 @@ package org.example.problems.DPK12;
 import java.util.Arrays;
 
 public class DPK12_impl_02 {
-    public static int[] bubbleSortSwapSimple(int[] input) {
+    public static int[] bubbleSort2ndFor(int[] input) {
         int[] result = input.clone();
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result.length - 1; j++) {
@@ -19,6 +19,6 @@ public class DPK12_impl_02 {
 
     public static void main(String[] args) {
         int[] array = {5, 4, 3, 2, 1};
-        System.out.println(Arrays.toString(bubbleSortSwapSimple(array)));
+        System.out.println(Arrays.toString(bubbleSort2ndFor(array)));
     }
 }
