@@ -1,7 +1,6 @@
 package org.example.problems.DPK13;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DPK13_impl_01 {
@@ -9,7 +8,6 @@ public class DPK13_impl_01 {
         List<String> result = new ArrayList<>();
 
         for (int i = 1; i <= limit; i++) {
-
             if (i % 3 == 0 && i % 5 == 0) {
                 result.add("FizzBuzz");
             } else if (i % 3 == 0) {
@@ -20,10 +18,8 @@ public class DPK13_impl_01 {
                 result.add(String.valueOf(i));
             }
         }
-
         return result;
     }
-
 
     public static void main(String[] args) {
         System.out.println(fizzbuzz(100));
