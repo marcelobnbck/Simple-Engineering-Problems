@@ -19,7 +19,6 @@ public class DPK13_impl_02 {
             }
             i++;
         }
-
         return result;
     }
 
