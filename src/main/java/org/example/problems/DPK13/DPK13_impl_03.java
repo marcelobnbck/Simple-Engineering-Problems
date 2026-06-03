@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DPK13_impl_03 {
-    public static List<String> fizzbuzz(int limit) {
+    public static List<String> fizzbuzzDoWhile(int limit) {
         List<String> result = new ArrayList<>();
         int i = 1;
         do {
@@ -23,6 +23,6 @@ public class DPK13_impl_03 {
     }
 
     public static void main(String[] args) {
-        System.out.println(fizzbuzz(100));
+        System.out.println(fizzbuzzDoWhile(100));
     }
 }
