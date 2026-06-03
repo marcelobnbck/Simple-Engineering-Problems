@@ -8,7 +8,7 @@ A list of engineering problems that are worth solving.
 
 ---
 
-## DPK01 Revert String
+## DPK01 - Revert String
 Create a function that can revert a string.
 
 ```markdown
@@ -17,7 +17,7 @@ revert("Hello") -> "olleH"
 
 ---
 
-## DPK02 Revert a List
+## DPK02 - Revert a List
 Create a function that can revert a list.
 
 ```markdown
@@ -26,7 +26,7 @@ revert([1,2,3,4,5]) -> [5,4,3,2,1]
 
 ---
 
-## DPK03 Lookup
+## DPK03 - Lookup
 Create a function that perform a lookup in a map for a given key you hould have id, name.
 
 ```markdown
@@ -42,7 +42,7 @@ lookup("john@john.jhon.com") -> "John"
 
 ---
 
-## DPK04 Simple Pattern Matcher
+## DPK04 - Simple Pattern Matcher
 Given the following countries and languages:
 
 ```markdown
@@ -68,7 +68,7 @@ pattern_matcher("Usa") -> "English"
 
 ---
 
-## DPK05 Pointers
+## DPK05 - Pointers
 Considering the following hash map:
 
 ```markdown
@@ -125,7 +125,7 @@ Now can you refactor your code and do less ifs? Maybe introduce pointers?
 
 ---
 
-## DPK06 Tokenizer
+## DPK06 - Tokenizer
 Create a function that can tokenize a string based on a token.
 
 ```markdown
@@ -138,7 +138,7 @@ Can you refactor your code and do that without using any prebuild function like 
 
 ---
 
-## DPK07 Group By
+## DPK07 - Group By
 Create a function that can group a list of numbers by a given number.
 
 ```markdown
@@ -154,7 +154,7 @@ Can you refactor the code and create your own group by function, do not use any 
 
 ---
 
-## DPK08 Map
+## DPK08 - Map
 Create a function that can map a function execution to each element of a list, return a new list.
 
 ```markdown
@@ -167,7 +167,7 @@ Now refactor the code and do not use any prebuild function.
 
 ---
 
-## DPK09 Filter
+## DPK09 - Filter
 Create a function that can filter a list based on a given condition.
 
 ```markdown
@@ -180,7 +180,7 @@ Now refactor the code and do not use any prebuild function.
 
 ---
 
-## DPK10 Reduce
+## DPK10 - Reduce
 Create a function that can reduce a list to a single value.
 
 ```markdown
@@ -193,7 +193,7 @@ Now refactor the code and do not use any prebuild function.
 
 ---
 
-## DPK11 Replace
+## DPK11 - Replace
 Create a function that can replace a given token in a string.
 
 ```markdown
@@ -210,7 +210,7 @@ Now refactor the code and do not use any prebuild function.
 
 ---
 
-## DPK12 Sort
+## DPK12 - Sort
 Create a function that can sort a list of numbers. The implementation should be a Bubble Sort(good to learn but terrible to use in production).
 
 ```markdown

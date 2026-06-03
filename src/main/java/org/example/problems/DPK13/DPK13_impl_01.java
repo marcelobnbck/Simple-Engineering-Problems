@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DPK13_impl_01 {
-    public static List<String> fizzbuzz(int limit) {
+    public static List<String> fizzbuzzFor(int limit) {
         List<String> result = new ArrayList<>();
 
         for (int i = 1; i <= limit; i++) {
@@ -22,6 +22,6 @@ public class DPK13_impl_01 {
     }
 
     public static void main(String[] args) {
-        System.out.println(fizzbuzz(100));
+        System.out.println(fizzbuzzFor(100));
     }
 }
