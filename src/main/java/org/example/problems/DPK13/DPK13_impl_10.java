@@ -3,11 +3,10 @@ package org.example.problems.DPK13;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DPK13_impl_06 {
-    public static List<String> fizzbuzzDoWhileSimple(int limit) {
+public class DPK13_impl_10 {
+    public static List<String> fizzbuzzForSimple2nd(int limit) {
         List<String> result = new ArrayList<>();
-        int i = 1;
-        do {
+        for (int i = 1; i <= limit; i++) {
             String value = "";
             if (i % 3 == 0) {
                 value += "Fizz";
@@ -19,12 +18,11 @@ public class DPK13_impl_06 {
                 value = String.valueOf(i);
             }
             result.add(value);
-            i++;
-        } while (i <= limit);
+        }
         return result;
     }
 
     public static void main(String[] args) {
-        System.out.println(fizzbuzzDoWhileSimple(100));
+        System.out.println(fizzbuzzForSimple2nd(100));
     }
 }
