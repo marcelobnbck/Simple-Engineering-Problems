@@ -25,4 +25,5 @@ public class DPK13_impl_08 {
     public static void main(String[] args) {
         System.out.println(fizzbuzzDoWhile2(100));
     }
+
 }
