@@ -4,35 +4,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DPK14_impl_01 {
-    public static List<String> fighterWalk(String[][] grid, int row, int column, List<String> moves) {
+    public static List<String> fighterWalkCase(String[][] grid, int row, int column, List<String> moves) {
         List<String> beaten = new ArrayList<>();
-
         String fighter = grid[row][column];
 
         for (String move : moves) {
-
             int newRow = row;
-            int newColumn = column;
+            int newCol = column;
 
-            if (move == "up") {
-                newRow = (row - 1 + grid.length) % grid.length;
-            } else if (move == "down") {
-                newRow = (row + 1) % grid.length;
-            } else if (move == "left") {
-                newColumn = (column - 1 + grid[0].length) % grid[0].length;
-            } else if (move == "right") {
-                newColumn = (column + 1) % grid[0].length;
+            switch (move) {
+                case "up":
+                    newRow = (row - 1 + grid.length) % grid.length;
+                    break;
+                case "down":
+                    newRow = (row + 1) % grid.length;
+                    break;
+                case "left":
+                    newCol = (column - 1 + grid[0].length) % grid[0].length;
+                    break;
+                case "right":
+                    newCol = (column + 1) % grid[0].length;
+                    break;
             }
-
-            if (grid[newRow][newColumn] != "") {
-                beaten.add(grid[newRow][newColumn]);
+            if (!grid[newRow][newCol].isEmpty()) {
+                beaten.add(grid[newRow][newCol]);
             }
-
-            grid[newRow][newColumn] = "";
-            grid[newRow][newColumn] = fighter;
+            grid[row][column] = "";
+            grid[newRow][newCol] = fighter;
 
             row = newRow;
-            column = newColumn;
+            column = newCol;
         }
 
         return beaten;
@@ -44,7 +45,7 @@ public class DPK14_impl_01 {
                 {"Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"}
         };
         String[] moves = {"up", "left", "down", "right"};
-        List<String> beaten = fighterWalk(grid, 0, 0, List.of(moves));
+        List<String> beaten = fighterWalkCase(grid, 0, 0, List.of(moves));
         System.out.println(beaten);
     }
 }
