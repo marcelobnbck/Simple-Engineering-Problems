@@ -233,3 +233,41 @@ Refactor the code to receive by parameter how many numbers you want to generate.
 ```markdown
 fizzbuzz(10) -> [1,2,"Fizz",4,"Buzz","Fizz",7,8,"Fizz","Buzz"]
 ```
+
+---
+
+## DPK14 - 2D Walk
+Create a function that can move a fighter in a 2D grid. The grid should be a 2D array.
+
+```markdown
+grid = [
+  ["Ryu", "E.Honda", "Blanka", "Guile", "Balrog", "Vega"],
+  ["Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"]
+]
+```
+
+The moves should be:
+- up
+- down
+- left
+- right
+
+The function should receive the grid, the initial position of the fighter and a list of moves.
+
+```markdown
+move(grid, [0,0], ["up", "left", "down", "right"])
+```
+
+Every time a player move to a new position, the old position should be empty.
+
+```markdown
+move(grid, [0,0], ["up"]) ->
+     ["", "E.Honda", "Blanka", "Guile", "Balrog", "Vega",
+     "Ryu", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"]
+```
+
+What the function needs to return is a list with the name of all players was beaten, therefore removed from the grid.
+
+```markdown
+move(grid, [0,0], ["up", "left", "down", "right"]) -> ["ken", "M.Bison", "Vega"] 
+```
