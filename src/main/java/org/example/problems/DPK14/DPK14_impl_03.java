@@ -7,7 +7,6 @@ public class DPK14_impl_03 {
         List<String> beaten = new java.util.ArrayList<>();
         String fighter = grid[row][column];
 
-
     }
 
     public static void main(String[] args) {
