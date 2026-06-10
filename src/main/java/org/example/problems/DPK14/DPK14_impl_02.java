@@ -28,7 +28,7 @@ public class DPK14_impl_02 {
                 beaten.add(grid[newRow][newColumn]);
             }
 
-            grid[newRow][newColumn] = "";
+            grid[row][column] = "";
             grid[newRow][newColumn] = fighter;
 
             row = newRow;
