@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DPK14_impl_01 {
-    public static List<String> fighterWalkCase(String[][] grid, int row, int column, List<String> moves) {
+    public static List<String> fighterWalk(String[][] grid, int row, int column, List<String> moves) {
         List<String> beaten = new ArrayList<>();
         String fighter = grid[row][column];
 
@@ -45,7 +45,7 @@ public class DPK14_impl_01 {
                 {"Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"}
         };
         String[] moves = {"up", "left", "down", "right"};
-        List<String> beaten = fighterWalkCase(grid, 0, 0, List.of(moves));
+        List<String> beaten = fighterWalk(grid, 0, 0, List.of(moves));
         System.out.println(beaten);
     }
 }
