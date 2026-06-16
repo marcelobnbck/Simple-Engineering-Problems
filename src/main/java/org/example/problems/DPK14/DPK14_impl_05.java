@@ -6,11 +6,9 @@ import java.util.List;
 public class DPK14_impl_05 {
     public static List<String> fighterWalkIf(String[][] grid, int row, int column, List<String> moves) {
         List<String> beaten = new ArrayList<>();
-
         String fighter = grid[row][column];
 
         for (String move : moves) {
-
             int newRow = row;
             int newColumn = column;
 
@@ -40,7 +38,7 @@ public class DPK14_impl_05 {
                 }
             }
 
-            if (grid[newRow][newColumn].equals("")) {
+            if (!grid[newRow][newColumn].equals("")) {
                 beaten.add(grid[newRow][newColumn]);
             }
 
@@ -50,7 +48,6 @@ public class DPK14_impl_05 {
             row = newRow;
             column = newColumn;
         }
-
         return beaten;
     }
 
