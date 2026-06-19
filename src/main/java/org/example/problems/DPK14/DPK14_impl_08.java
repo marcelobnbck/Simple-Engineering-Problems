@@ -48,7 +48,7 @@ public class DPK14_impl_08 {
                 {"Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"}
         };
         int[] moves = {0,2,1,3};
-        //String[] directions = {"up", "left", "down", "right"};
+        String[] directions = {"up", "left", "down", "right"};
         List<String> beaten = List.of(fighterWalk(grid, 0, 0, moves));
         System.out.println(beaten);
     }
