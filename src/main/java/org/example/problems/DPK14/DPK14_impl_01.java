@@ -26,16 +26,17 @@ public class DPK14_impl_01 {
                     newCol = (column + 1) % grid[0].length;
                     break;
             }
+
             if (!grid[newRow][newCol].isEmpty()) {
                 beaten.add(grid[newRow][newCol]);
             }
+
             grid[row][column] = "";
             grid[newRow][newCol] = fighter;
 
             row = newRow;
             column = newCol;
         }
-
         return beaten;
     }
 
