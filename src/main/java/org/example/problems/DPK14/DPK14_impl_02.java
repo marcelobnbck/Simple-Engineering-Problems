@@ -6,7 +6,6 @@ import java.util.List;
 public class DPK14_impl_02 {
     public static List<String> fighterWalkIf(String[][] grid, int row, int column, List<String> moves) {
         List<String> beaten = new ArrayList<>();
-
         String fighter = grid[row][column];
 
         for (String move : moves) {
@@ -34,7 +33,6 @@ public class DPK14_impl_02 {
             row = newRow;
             column = newColumn;
         }
-
         return beaten;
     }
 

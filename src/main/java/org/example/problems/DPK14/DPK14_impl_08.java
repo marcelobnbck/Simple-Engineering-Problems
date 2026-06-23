@@ -6,9 +6,9 @@ public class DPK14_impl_08 {
         public static String[] fighterWalk(String[][] grid, int startRow, int startColumn, String[] moves) {
             int row = startRow;
             int column = startColumn;
+            int beatenIndex = 0;
             String fighter = grid[row][column];
             String[] beaten = new String[20];
-            int beatenIndex = 0;
 
             for (int i = 0; i < moves.length; i++) {
                 int newRow = row;
@@ -43,8 +43,8 @@ public class DPK14_impl_08 {
                     beaten[beatenIndex] = grid[newRow][newColumn];
                     beatenIndex++;
                 }
-                grid[row][column] = "";
 
+                grid[row][column] = "";
                 grid[newRow][newColumn] = fighter;
 
                 row = newRow;

@@ -5,7 +5,6 @@ import java.util.List;
 public class DPK14_impl_04 {
     public static String[] fighterWalk(String[][] grid, int row, int column, int[] moves, List<String> directions) {
         String fighter = grid[row][column];
-
         String[] beaten = new String[20];
         int count = 0;
 
@@ -63,13 +62,11 @@ public class DPK14_impl_04 {
             row = newRow;
             column = newCol;
         }
-
         String[] result = new String[count];
 
         for (int i = 0; i < count; i++) {
             result[i] = beaten[i];
         }
-
         return result;
     }
 

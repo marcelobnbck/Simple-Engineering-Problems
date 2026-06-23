@@ -28,9 +28,11 @@ public class DPK14_impl_07 {
                     newCol = (col + 1) % grid[0].length;
                     break;
             }
+
             if (!grid[newRow][newCol].isEmpty()) {
                 beaten.add(grid[newRow][newCol]);
             }
+
             grid[row][col] = "";
             grid[newRow][newCol] = fighter;
 
