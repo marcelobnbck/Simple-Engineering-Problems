@@ -271,3 +271,43 @@ What the function needs to return is a list with the name of all players was bea
 ```markdown
 move(grid, [0,0], ["up", "left", "down", "right"]) -> ["ken", "M.Bison", "Vega"] 
 ```
+
+---
+
+## DPK15 - OOP with Classes
+Create a class that can represent a person. The person should have a name, age and a list of friends.
+
+```markdown
+person = new Person("John", 30)
+person.addFriend("Paul")
+person.addFriend("George")
+person.addFriend("Ringo")
+```
+
+The person should have a method that can return the name of the person and the list of friends.
+
+```markdown
+person.getFriends() -> ["Paul", "George", "Ringo"]
+```
+
+The person should have a method that can return the age.
+
+```markdown
+person.getAge() -> 30
+```
+
+The person should have a method that can return the name of the person.
+
+```markdown
+person.getName() -> "John"
+```
+
+Refactoring time:
+1. Now could you refactor the code and move the list of friends to a separate class?
+2. Refactor the code so you don't allow the same friend to be added twice.
+3. Refactor the code so you can remove a friend from the list.
+
+More Refactoring:
+1. In one of your classes, could you create a method that tell who is the person with more friends?
+2. In one of your classes, could you create a method that tell who is the person with less friends?
+3. In one of your classes, could you create a method that tell who is the person with the oldest friend?
