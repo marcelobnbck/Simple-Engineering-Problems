@@ -6,7 +6,12 @@ public class DPK15_impl_01 {
     public static class Person {
         private String name;
         private int age;
-        private ArrayList<String> friends;
+        public ArrayList<String> friends;
+
+        public Person(String person, int age) {
+            this.name = person;
+            this.age = age;
+        }
 
         public String getName() {
             return name;
@@ -34,15 +39,11 @@ public class DPK15_impl_01 {
     }
 
     public static void main(String[] args) {
-        Person p1 = new Person();
+        Person p1 = new Person("John", 30);
 
-        p1.setName("John");
-        p1.setAge(30);
-        p1.setFriends(new ArrayList<>() {{
-            add("Paul");
-            add("George");
-            add("Ringo");
-        }});
+        p1.friends.add("Paul");
+        p1.friends.add("George");
+        p1.friends.add("Ringo");
 
         System.out.println("Friends: " + p1.getFriends());
         System.out.println("Age: " + p1.getAge());
