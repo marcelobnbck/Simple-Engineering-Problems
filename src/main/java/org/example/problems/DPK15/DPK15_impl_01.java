@@ -1,17 +1,12 @@
 package org.example.problems.DPK15;
 
-import java.util.ArrayList;
-
 public class DPK15_impl_01 {
     public static class Person {
+
         private String name;
         private int age;
-        public ArrayList<String> friends;
+        private Friends friends;
 
-        public Person(String person, int age) {
-            this.name = person;
-            this.age = age;
-        }
 
         public String getName() {
             return name;
@@ -29,23 +24,30 @@ public class DPK15_impl_01 {
             this.age = newAge;
         }
 
-        public ArrayList<String> getFriends() {
+        public Friends getFriends() {
             return friends;
         }
 
-        public void setFriends(ArrayList<String> newFriends) {
+        public void setFriends(Friends newFriends) {
             this.friends = newFriends;
         }
     }
 
     public static void main(String[] args) {
-        Person p1 = new Person("John", 30);
+        Person p1 = new Person();
 
-        p1.friends.add("Paul");
-        p1.friends.add("George");
-        p1.friends.add("Ringo");
+        p1.setName("John");
+        p1.setAge(30);
 
-        System.out.println("Friends: " + p1.getFriends());
+        Friends friends = new Friends();
+
+        friends.addFriend("Paul");
+        friends.addFriend("George");
+        friends.addFriend("Ringo");
+
+        p1.setFriends(friends);
+
+        System.out.println("Friends: " + p1.getFriends().getFriends());
         System.out.println("Age: " + p1.getAge());
         System.out.println("Name: " + p1.getName());
     }
