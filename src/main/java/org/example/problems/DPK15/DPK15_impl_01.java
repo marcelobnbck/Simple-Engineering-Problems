@@ -2,11 +2,9 @@ package org.example.problems.DPK15;
 
 public class DPK15_impl_01 {
     public static class Person {
-
         private String name;
         private int age;
         private Friends friends;
-
 
         public String getName() {
             return name;
@@ -44,6 +42,8 @@ public class DPK15_impl_01 {
         friends.addFriend("Paul");
         friends.addFriend("George");
         friends.addFriend("Ringo");
+        friends.addFriend("Ringo"); // Testing to include the same friend on 2nd refactor
+        friends.removeFriend("Paul"); // Testing to remove a friend on 3rd refactor
 
         p1.setFriends(friends);
 
